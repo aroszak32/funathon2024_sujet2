@@ -2,7 +2,7 @@
 
 <img src="img/cockpit.png" style="width: 50%; height: 50%"/>
 
-test
+test 2
 
 ## Données
 
