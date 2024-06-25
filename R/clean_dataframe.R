@@ -3,6 +3,10 @@
 library(readr)
 library(stringr)
 
+table_aeroport <- read_csv2(unlist(urls$airports))
+table_compagnies <- read_csv2(unlist(urls$compagnies))
+table_liaisons <- read_csv2(unlist(urls$liaisons))
+
 clean_dataframe <- function(df){
   
   # Créer les colonnes an et mois
@@ -22,24 +26,4 @@ clean_dataframe <- function(df){
   
 }
 
-import_airport_data <- function(list_files){
-  
-  pax_apt_all <- readr::read_csv2(
-    list_files, 
-    col_types = cols(
-      ANMOIS = col_character(),
-      APT = col_character(),
-      APT_NOM = col_character(),
-      APT_ZON = col_character(),
-      .default = col_double()
-    )
-  ) %>% 
-    clean_dataframe()
-  
-  return(pax_apt_all)
-  
-}
 
-source("R/clean_dataframe.R")
-
-table_aeroport <- read_csv2(unlist(urls$airports))
