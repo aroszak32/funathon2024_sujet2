@@ -11,7 +11,8 @@ source("correction/R/create_data_list.R")
 source("correction/R/clean_dataframe.R")
 source("correction/R/figures.R")
 source("R/figures.R")
-
+source("R/divers_functions.R")
+source("R/tables.R")
 
 # Load data ----------------------------------
 urls <- create_data_list("./sources.yml")
